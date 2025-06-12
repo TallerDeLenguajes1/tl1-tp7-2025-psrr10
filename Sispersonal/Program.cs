@@ -30,4 +30,45 @@ public class Empleado
         SueldoBasico = sueldo;
         Cargo = cargo;
     }
+
+    public int Edad
+    {
+        get
+        {
+            var hoy = DateTime.Today;
+            int edad = hoy.Year - FechaNacimiento.Year;
+            if (FechaNacimiento.Date > hoy.AddYears(-edad)) edad--;
+            return edad;
+        }
+    }
+
+
+    public int antiguedad
+    {
+        get
+        {
+            var hoy = DateTime.Today;
+            int años = hoy.Year - FechaIngreso.Year;
+            if (FechaIngreso.Date > hoy.AddYears(-años)) años--;
+            return años;
+        }
+    }
+
+    public int AñosParaJubilarse
+    {
+        get
+        {
+            return 65 - Edad;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
 }
