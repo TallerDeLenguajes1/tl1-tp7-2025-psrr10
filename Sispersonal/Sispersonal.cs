@@ -84,7 +84,7 @@ public class Empleado
         {
             adicional += 150000;
         }
-        return SueldoBasico + adicional;  
+        return SueldoBasico + adicional;
     }
 
 
