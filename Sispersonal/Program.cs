@@ -63,6 +63,30 @@ public class Empleado
     }
 
 
+    public double CalcularSalario()
+    {
+        double adicional;
+        if (antiguedad <= 20)
+        {
+            adicional = SueldoBasico * (antiguedad * 0.01);
+        }
+        else
+        {
+            adicional = SueldoBasico * 0.25;
+        }
+
+        if (Cargo == Cargo.Ingeniero || Cargo == Cargo.Especialista)
+        {
+            adicional *= 1.5;
+        }
+
+        if (EstadoCivil == 'C')
+        {
+            adicional += 150000;
+        }
+        return SueldoBasico + adicional;  
+    }
+
 
 
 
