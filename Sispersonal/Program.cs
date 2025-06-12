@@ -1,7 +1,7 @@
 ﻿using System;
 using SisPersonal;
 
-class program
+class Programa
 {
     static void Main()
     {
@@ -14,5 +14,13 @@ class program
         empleados[2] = new Empleado("María", "López", new DateTime(1972, 12, 5), 'C', new DateTime(2000, 1, 1), 700000, Cargo.Especialista);
 
         Console.WriteLine("Empleados cargados correctamente");
+
+        double totalSalarios = 0;
+        foreach (Empleado e in empleados)
+        {
+            totalSalarios = totalSalarios + e.CalcularSalario();
+        }
+
+        Console.WriteLine($"Monto total pagado en salarios = ${totalSalarios}");
     }
 }
