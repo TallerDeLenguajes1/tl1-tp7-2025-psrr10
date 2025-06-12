@@ -43,7 +43,7 @@ public class Empleado
     }
 
 
-    public int antiguedad
+    public int Antiguedad
     {
         get
         {
@@ -66,9 +66,9 @@ public class Empleado
     public double CalcularSalario()
     {
         double adicional;
-        if (antiguedad <= 20)
+        if (Antiguedad <= 20)
         {
-            adicional = SueldoBasico * (antiguedad * 0.01);
+            adicional = SueldoBasico * (Antiguedad * 0.01);
         }
         else
         {
@@ -86,13 +86,6 @@ public class Empleado
         }
         return SueldoBasico + adicional;  
     }
-
-
-
-
-
-
-
 
 
 }
